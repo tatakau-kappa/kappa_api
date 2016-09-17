@@ -1,13 +1,4 @@
 describe Videos::CommentsController, type: :request do
-  let(:headers) do
-    {
-      'Content-Type': 'application/json',
-      'Authorization': user.access_token
-    }
-  end
-
-  let(:user) { create(:user) }
-
   describe '/POST /videos/:video_id/comments' do
     let(:video) { create(:video) }
     let(:params) do

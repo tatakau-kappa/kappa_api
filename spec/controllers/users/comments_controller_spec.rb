@@ -1,13 +1,4 @@
 describe Users::CommentsController, type: :request do
-  let(:headers) do
-    {
-      'Content-Type': 'application/json',
-      'Authorization': user.access_token
-    }
-  end
-
-  let(:user) { create(:user) }
-
   describe '/GET /users/:user_id/videos/comments' do
     it 'create comment of video', autodoc: true do
       get comments_user_videos_path(user), headers: headers

@@ -1,13 +1,4 @@
 describe VideosController, type: :request do
-  let(:headers) do
-    {
-      'Content-Type': 'application/json',
-      'Authorization': user.access_token
-    }
-  end
-
-  let(:user) { create(:user) }
-
   describe '/GET /videos' do
     it 'get videos', autodoc: true do
       get videos_path, headers: headers
@@ -39,6 +30,7 @@ describe VideosController, type: :request do
   end
 
   describe '/PUT /videos/:id' do
+    let(:authorization) { false }
     let(:video) { create(:video) }
     let(:params) do
       {
@@ -48,7 +40,7 @@ describe VideosController, type: :request do
     end
 
     it 'update video', autodoc: true do
-      put video_path(video), params: params
+      put video_path(video), params: params, headers: headers
 
       expect(response).to have_http_status(204)
     end

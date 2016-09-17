@@ -46,6 +46,7 @@ RSpec.configure do |config|
   config.order = 'random'
 
   config.include FactoryGirl::Syntax::Methods
+  config.include RequestHelper, type: :request
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
