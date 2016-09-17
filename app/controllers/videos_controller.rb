@@ -7,7 +7,7 @@ class VideosController < ApplicationController
 
   def show
     video = Video.find(params[:id])
-    return head :not_found if video.swapped_url.blank?
+    return head 102 if video.swapped_url.blank?
 
     video.increment!(:view_count)
     redirect_to video.swapped_url
