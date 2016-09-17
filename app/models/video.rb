@@ -1,6 +1,6 @@
 class Video < ApplicationRecord
   belongs_to :user
-  has_many :video_comments
+  has_many :video_comments, dependent: :destroy
 
   class << self
     def redis
