@@ -39,7 +39,7 @@ class Video < ApplicationRecord
 
   def resource_url(key)
     if key.present?
-      "https://d2nfxe3r64iwve.cloudfront.net/#{key.sub('processed/', '')}"
+      "https://d2nfxe3r64iwve.cloudfront.net/#{key.sub('/processed/', '')}"
     end
   end
 end
