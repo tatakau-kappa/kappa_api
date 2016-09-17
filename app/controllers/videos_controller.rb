@@ -2,7 +2,8 @@ class VideosController < ApplicationController
   skip_before_action :authenticate_user_from_token!, only: [:show, :update, :destroy]
 
   def index
-    render json: Video.includes(:video_comments).order(created_at: :desc)
+    render json: Video.includes(:video_comments).order(created_at: :desc),
+           include: { video_comments: :user }
   end
 
   def show
