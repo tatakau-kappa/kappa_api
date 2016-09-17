@@ -10,7 +10,7 @@ end
 
 Video.seed do |s|
   s.user          = User.find(1)
-  s.id            = 101
+  s.id            = 13
   s.video_uid     = 'test/honda-video.mp4'
   s.image_uid     = 'dummy2.jpg'
   s.swapped_uid   = '/processed/13/video.mp4'
@@ -20,7 +20,7 @@ end
 
 Video.seed do |s|
   s.user          = User.find(1)
-  s.id            = 102
+  s.id            = 14
   s.video_uid     = 'test/geesu-video.mp4'
   s.image_uid     = 'dummy3.jpg'
   s.swapped_uid   = '/processed/14/video.mp4'
@@ -30,7 +30,7 @@ end
 
 Video.seed do |s|
   s.user          = User.find(1)
-  s.id            = 103
+  s.id            = 15
   s.video_uid     = 'test/hikakin-video.mp4'
   s.image_uid     = 'dummy4.jpg'
   s.swapped_uid   = '/processed/15/video.mp4'
