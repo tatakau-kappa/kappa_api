@@ -7,6 +7,7 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+gem 'puma_worker_killer', require: false
 gem 'redis'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -49,6 +50,11 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
+
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-puma', github: 'seuros/capistrano-puma'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
