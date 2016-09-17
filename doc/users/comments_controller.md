@@ -5,9 +5,9 @@ Create comment of video.
 
 #### Request
 ```
-GET /users/152/videos/comments HTTP/1.1
+GET /users/171/videos/comments HTTP/1.1
 Accept: application/json
-Authorization: 152:R8Fbobdgxz96Ex2sX78D
+Authorization: 171:haQAq3XsVjHFVcVvgqkB
 Content-Length: 0
 Content-Type: application/json
 Host: www.example.com
@@ -19,38 +19,38 @@ HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 403
 Content-Type: application/json; charset=utf-8
-ETag: W/"e86be0b65c507cf78176d628a3588d5d"
+ETag: W/"4886f2b300abe6db4312f67a059401fd"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 701740ff-589c-465a-b85b-fa5f94f1025b
-X-Runtime: 0.018654
+X-Request-Id: a03109a0-fb9a-4474-9a7d-456a1ad70f66
+X-Runtime: 0.019644
 X-XSS-Protection: 1; mode=block
 
 [
   {
-    "id": 43,
+    "id": 49,
     "contents": "コメントだよー",
     "user": {
-      "id": 152,
+      "id": 171,
       "screen_name": "Kappa Taro",
       "image_url": "https://facebook.com/hgoe.jpg"
     }
   },
   {
-    "id": 44,
+    "id": 50,
     "contents": "コメントだよー",
     "user": {
-      "id": 152,
+      "id": 171,
       "screen_name": "Kappa Taro",
       "image_url": "https://facebook.com/hgoe.jpg"
     }
   },
   {
-    "id": 45,
+    "id": 51,
     "contents": "コメントだよー",
     "user": {
-      "id": 152,
+      "id": 171,
       "screen_name": "Kappa Taro",
       "image_url": "https://facebook.com/hgoe.jpg"
     }

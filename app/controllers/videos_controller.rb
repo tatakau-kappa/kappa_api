@@ -36,6 +36,6 @@ class VideosController < ApplicationController
   private
 
   def video_params
-    params.permit(:image_uid, :video_uid)
+    params.permit(:image_uid, :video_uid, :program_name)
   end
 end

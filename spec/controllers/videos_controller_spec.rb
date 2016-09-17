@@ -26,7 +26,8 @@ describe VideosController, type: :request do
     let(:params) do
       {
         video_uid: "#{Devise.friendly_token[0,20]}.mp4",
-        image_uid: "#{Devise.friendly_token[0,20]}.jpg"
+        image_uid: "#{Devise.friendly_token[0,20]}.jpg",
+        program_name: '番組名だよー'
       }
     end
 
