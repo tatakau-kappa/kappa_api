@@ -24,17 +24,17 @@ HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 77
 Content-Type: application/json; charset=utf-8
-ETag: W/"e4cf4f355b4ebda3a4e263965ac96ee2"
+ETag: W/"43ea054bc81ef6cf7454ca59527c5827"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 48b6c7ea-3da5-4988-b9d5-ebf63bc001e2
-X-Runtime: 0.021799
+X-Request-Id: cf509727-fb7f-44b9-8790-bdb78d73d622
+X-Runtime: 0.078148
 X-XSS-Protection: 1; mode=block
 
 {
   "token_type": "Bearer",
-  "user_id": 11,
-  "access_token": "11:hqFqD7dZq8R_zJrtqufT"
+  "user_id": 29,
+  "access_token": "29:MePUd86taxWvfUNZfqY_"
 }
 ```

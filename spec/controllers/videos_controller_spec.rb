@@ -1,5 +1,9 @@
 describe VideosController, type: :request do
   describe '/GET /videos' do
+    before do
+      create_list(:video, 3)
+    end
+
     it 'get videos', autodoc: true do
       get videos_path, headers: headers
 
@@ -19,7 +23,7 @@ describe VideosController, type: :request do
 
   describe '/POST /videos' do
     let(:params) do
-      { original_uid: "#{Devise.friendly_token[0,20]}.mp4}" }
+      { original_uid: "#{Devise.friendly_token[0,20]}.mp4" }
     end
 
     it 'create video', autodoc: true do

@@ -1,6 +1,6 @@
 class Users::CommentsController < ApplicationController
   def index
-    render json: resource.video_comments.includes(:videos), each_serializer: VideoCommentSerializer
+    render json: resource.video_comments.includes(:video), each_serializer: VideoCommentSerializer
   end
 
   private
