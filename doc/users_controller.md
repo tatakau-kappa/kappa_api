@@ -22,19 +22,19 @@ Host: www.example.com
 ```
 HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 79
+Content-Length: 77
 Content-Type: application/json; charset=utf-8
-ETag: W/"8b8bcec39e20102232783f6376b97a04"
+ETag: W/"e4cf4f355b4ebda3a4e263965ac96ee2"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: e0d787d2-cba6-426a-9b2e-5e2fe4f065eb
-X-Runtime: 0.031493
+X-Request-Id: 48b6c7ea-3da5-4988-b9d5-ebf63bc001e2
+X-Runtime: 0.021799
 X-XSS-Protection: 1; mode=block
 
 {
   "token_type": "Bearer",
-  "user_id": 193,
-  "access_token": "193:1nxwnxE92Nw7PBz5aZAE"
+  "user_id": 11,
+  "access_token": "11:hqFqD7dZq8R_zJrtqufT"
 }
 ```

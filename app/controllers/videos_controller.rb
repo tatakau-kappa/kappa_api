@@ -6,7 +6,11 @@ class VideosController < ApplicationController
   end
 
   def show
-    render json: Video.find(params[:id])
+    video = Video.find(params[:id])
+    return head :not_found if video.swapped_path.blank?
+
+    video.increment!(:view_count)
+    redirect_to video.swapped_path
   end
 
   def create

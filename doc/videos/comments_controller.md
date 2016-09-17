@@ -5,9 +5,9 @@ Create comment of video.
 
 #### Request
 ```
-POST /videos/78/comments HTTP/1.1
+POST /videos/2/comments HTTP/1.1
 Accept: application/json
-Authorization: 191:ENYDa--E2v8wR-SdwjJY
+Authorization: 4:gRY9htUHaaxG9UvHLhve
 Content-Length: 36
 Content-Type: application/json
 Host: www.example.com
@@ -21,21 +21,21 @@ Host: www.example.com
 ```
 HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 62
+Content-Length: 59
 Content-Type: application/json; charset=utf-8
-ETag: W/"c100eb0f9c008406684d0282579095da"
+ETag: W/"e562ef8c6e29631135ba01eb75b85d22"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: d720baaa-7007-4d1b-b52b-416712d2e0c8
-X-Runtime: 0.023172
+X-Request-Id: bf3e599c-80a9-4da5-a3d2-e091b9c71e1a
+X-Runtime: 0.079606
 X-XSS-Protection: 1; mode=block
 
 {
-  "id": 21,
+  "id": 1,
   "contents": "コメントだよー",
   "user": {
-    "id": 191
+    "id": 4
   }
 }
 ```

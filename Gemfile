@@ -22,6 +22,7 @@ gem 'active_model_serializers'
 gem 'default_value_for'
 
 gem 'config'
+gem 'fast_blank'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

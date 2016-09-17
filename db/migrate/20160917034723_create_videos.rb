@@ -6,6 +6,7 @@ class CreateVideos < ActiveRecord::Migration[5.0]
       t.string :swapped_uid
       t.string :thumbnail_uid
       t.string :program_name
+      t.integer :view_count,  null: false, default: 0
 
       t.timestamps
     end

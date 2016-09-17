@@ -10,16 +10,16 @@ describe VideosController, type: :request do
   describe '/GET /videos/:id' do
     let(:video) { create(:video) }
 
-    it 'get video', autodoc: true do
+    it 'redirect video', autodoc: true do
       get video_path(video), headers: headers
 
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(302)
     end
   end
 
   describe '/POST /videos' do
     let(:params) do
-      { original_uid: Devise.friendly_token[0,20] }
+      { original_uid: "#{Devise.friendly_token[0,20]}.mp4}" }
     end
 
     it 'create video', autodoc: true do
@@ -34,8 +34,8 @@ describe VideosController, type: :request do
     let(:video) { create(:video) }
     let(:params) do
       {
-        swapped_uid: Devise.friendly_token[0,20],
-        thumbnail_uid: Devise.friendly_token[0,20]
+        swapped_uid: "#{Devise.friendly_token[0,20]}.mp4",
+        thumbnail_uid: "#{Devise.friendly_token[0,20]}.jpg"
       }
     end
 

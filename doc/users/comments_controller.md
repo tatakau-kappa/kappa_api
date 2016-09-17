@@ -5,9 +5,9 @@ Create comment of video.
 
 #### Request
 ```
-GET /users/189/videos/comments HTTP/1.1
+GET /users/12/videos/comments HTTP/1.1
 Accept: application/json
-Authorization: 189:ycV67NQkGmULKCb-pt_s
+Authorization: 12:fP1hqQdyppTBkjfDy4z3
 Content-Length: 0
 Content-Type: application/json
 Host: www.example.com
@@ -23,8 +23,8 @@ ETag: W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 4650cc94-aa70-4cee-a93d-34b66cdf9027
-X-Runtime: 0.016532
+X-Request-Id: 4dd44f09-3b7e-40d7-871d-6898fb8aeb39
+X-Runtime: 0.012352
 X-XSS-Protection: 1; mode=block
 
 [

@@ -1,19 +1,13 @@
 class VideoSerializer < ActiveModel::Serializer
-  attributes :id, :resource, :program_name
+  attributes :id, :resource, :program_name, :view_count
 
   has_many :video_comments
 
   def resource
     {
-      original: resource_path(object.original_uid),
-      swapped: resource_path(object.swapped_uid),
-      thumbnail: resource_path(object.thumbnail_uid)
+      original: object.original_path,
+      swapped: object.swapped_path,
+      thumbnail: object.thumbnail_path
     }
-  end
-
-  private
-
-  def resource_path(key)
-    "https://d2nfxe3r64iwve.cloudfront.net/#{key}" if key.present?
   end
 end

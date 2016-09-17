@@ -55,13 +55,14 @@ ActiveRecord::Schema.define(version: 20160917034733) do
   end
 
   create_table "videos", force: :cascade do |t|
-    t.integer  "user_id",       null: false
-    t.string   "original_uid",  null: false
+    t.integer  "user_id",                   null: false
+    t.string   "original_uid",              null: false
     t.string   "swapped_uid"
     t.string   "thumbnail_uid"
     t.string   "program_name"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer  "view_count",    default: 0, null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.index ["created_at"], name: "index_videos_on_created_at"
     t.index ["original_uid"], name: "index_videos_on_original_uid", unique: true
     t.index ["swapped_uid"], name: "index_videos_on_swapped_uid", unique: true
