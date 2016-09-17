@@ -14,6 +14,6 @@ class VideoSerializer < ActiveModel::Serializer
   private
 
   def resource_path(key)
-    "https://d2nfxe3r64iwve.cloudfront.net/#{key}"
+    "https://d2nfxe3r64iwve.cloudfront.net/#{key}" if key.present?
   end
 end
