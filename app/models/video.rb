@@ -13,7 +13,10 @@ class Video < ApplicationRecord
   end
 
   def register_transition_job
-    self.class.redis.lpush(self.class.queue_name, { video_uid: video_uid, image_uid: image_uid }.to_json)
+    self.class.redis.lpush(
+      self.class.queue_name,
+      { video_id: id, video_uid: video_uid, image_uid: image_uid }.to_json
+    )
   end
 
   def add_up_bonus
