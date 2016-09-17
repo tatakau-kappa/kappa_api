@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160917034733) do
+ActiveRecord::Schema.define(version: 20160917200219) do
+
+  create_table "user_mobile_devices", force: :cascade do |t|
+    t.integer  "user_id",      null: false
+    t.string   "device_token", null: false
+    t.string   "device_type",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["user_id"], name: "index_user_mobile_devices_on_user_id"
+  end
 
   create_table "user_providers", force: :cascade do |t|
     t.integer  "user_id",       null: false

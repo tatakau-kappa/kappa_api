@@ -23,6 +23,7 @@ gem 'devise'
 gem 'active_model_serializers'
 gem 'default_value_for'
 gem 'koala'
+gem 'houston'
 
 gem 'config'
 gem 'fast_blank'

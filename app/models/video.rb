@@ -16,6 +16,14 @@ class Video < ApplicationRecord
     self.class.redis.lpush(self.class.queue_name, { video_uid: video_uid, image_uid: image_uid }.to_json)
   end
 
+  def add_up_bonus
+    if (view_count % 10).zero?
+      d_client = DocomoPoint::Client.new('token')
+      d_client.add_up(100)
+      user.user_mobile_devices.notify_to_ios('dポイントを獲得しました')
+    end
+  end
+
   def swapped_url
     resource_url(swapped_uid)
   end

@@ -2,6 +2,7 @@ class User < ApplicationRecord
   has_many :user_providers
   has_many :videos
   has_many :video_comments
+  has_many :user_mobile_devices
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

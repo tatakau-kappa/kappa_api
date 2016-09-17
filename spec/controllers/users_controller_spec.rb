@@ -1,5 +1,5 @@
 describe UsersController, type: :request do
-  describe '/POST /login' do
+  describe 'POST /login' do
     let(:params) do
       {
         id: 'facebook_id',

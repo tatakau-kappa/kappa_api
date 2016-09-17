@@ -1,5 +1,5 @@
 describe VideosController, type: :request do
-  describe '/GET /videos' do
+  describe 'GET /videos' do
     before do
       create_list(:video, 2)
       create(:video_comment)
@@ -12,7 +12,7 @@ describe VideosController, type: :request do
     end
   end
 
-  describe '/GET /videos/:id' do
+  describe 'GET /videos/:id' do
     let(:video) { create(:video) }
 
     it 'redirect video', autodoc: true do
@@ -22,7 +22,7 @@ describe VideosController, type: :request do
     end
   end
 
-  describe '/POST /videos' do
+  describe 'POST /videos' do
     let(:params) do
       {
         video_uid: "#{Devise.friendly_token[0,20]}.mp4",
@@ -38,7 +38,7 @@ describe VideosController, type: :request do
     end
   end
 
-  describe '/PUT /videos/:id' do
+  describe 'PUT /videos/:id' do
     let(:authorization) { false }
     let(:video) { create(:video) }
     let(:params) do

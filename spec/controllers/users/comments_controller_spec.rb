@@ -1,5 +1,5 @@
 describe Users::CommentsController, type: :request do
-  describe '/GET /users/:user_id/videos/comments' do
+  describe 'GET /users/:user_id/videos/comments' do
     before do
       create_list(:video_comment, 3, user: user)
     end

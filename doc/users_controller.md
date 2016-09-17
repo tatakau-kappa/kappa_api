@@ -24,18 +24,18 @@ HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 123
 Content-Type: application/json; charset=utf-8
-ETag: W/"def5895cdb989f47f375907ffbb5e18c"
+ETag: W/"18d375e8ae7f6430aa542da3c2a86a2c"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: f7420a55-fb64-4bd5-97ec-d2c193742740
-X-Runtime: 0.020345
+X-Request-Id: 5410fae2-33a5-486f-bea6-9855d912c39a
+X-Runtime: 0.022004
 X-XSS-Protection: 1; mode=block
 
 {
-  "id": 363,
+  "id": 125,
   "screen_name": "Kappa Taro",
   "image_url": "https://facebook.com/hoge.jpg",
-  "access_token": "363:y98BzP2WjWNKsB3dqA6H"
+  "access_token": "125:pxRt7vZ9SNz2oMyhSrxW"
 }
 ```

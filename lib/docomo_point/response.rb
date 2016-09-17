@@ -17,8 +17,12 @@ module DocomoPoint
         @body = body
       end
 
-      def to_json
+      def to_obj
         JSON.parse(@body)
+      end
+
+      def to_json
+        @body
       end
     end
   end
