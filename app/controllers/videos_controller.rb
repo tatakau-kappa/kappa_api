@@ -3,7 +3,7 @@ class VideosController < ApplicationController
 
   def index
     render json: Video.includes(:video_comments).order(created_at: :desc),
-           include: { video_comments: :user }
+           include: [:user, video_comments: :user]
   end
 
   def show
