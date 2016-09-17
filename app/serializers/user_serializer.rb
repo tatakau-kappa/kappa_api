@@ -1,3 +1,3 @@
-class UserSerializer < ActiveModel::Serializer
-  attributes :id
+class UserSerializer < ApplicationSerializer
+  attributes :id, :screen_name, :image_url
 end

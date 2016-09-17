@@ -42,6 +42,8 @@ namespace :deploy do
     end
   end
 
+  before 'deploy:publishing', 'db:seed_fu'
+
   after :finishing, 'deploy:restart'
 end
 

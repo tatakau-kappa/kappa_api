@@ -1,14 +1,13 @@
-class VideoSerializer < ActiveModel::Serializer
+class VideoSerializer < ApplicationSerializer
   attributes :id, :resource, :program_name, :view_count
 
   has_many :video_comments
+  belongs_to :user
 
   def resource
     {
-      original_image: object.original_image_path,
-      original_video: object.original_video_path,
-      swapped: object.swapped_path,
-      thumbnail: object.thumbnail_path
+      swapped: video_url(object),
+      thumbnail: object.thumbnail_url
     }
   end
 end

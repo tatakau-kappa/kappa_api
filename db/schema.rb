@@ -13,14 +13,14 @@
 ActiveRecord::Schema.define(version: 20160917034733) do
 
   create_table "user_providers", force: :cascade do |t|
-    t.integer  "user_id",      null: false
-    t.string   "access_token", null: false
-    t.string   "name",         null: false
-    t.string   "uid",          null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["access_token", "name"], name: "index_user_providers_on_access_token_and_name"
-    t.index ["user_id", "name"], name: "index_user_providers_on_user_id_and_name", unique: true
+    t.integer  "user_id",       null: false
+    t.string   "access_token",  null: false
+    t.string   "provider_name", null: false
+    t.string   "uid",           null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["access_token", "provider_name"], name: "index_user_providers_on_access_token_and_provider_name"
+    t.index ["user_id", "provider_name"], name: "index_user_providers_on_user_id_and_provider_name", unique: true
     t.index ["user_id"], name: "index_user_providers_on_user_id"
   end
 
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 20160917034733) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "access_token"
+    t.string   "screen_name"
+    t.string   "image_url"
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
     t.index ["email"], name: "index_users_on_email", unique: true

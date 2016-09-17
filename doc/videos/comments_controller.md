@@ -5,9 +5,9 @@ Create comment of video.
 
 #### Request
 ```
-POST /videos/26/comments HTTP/1.1
+POST /videos/130/comments HTTP/1.1
 Accept: application/json
-Authorization: 32:BdhW9xKKxqeRkyX5nw9e
+Authorization: 166:Ww6So4W2XRBC7NxxoGmc
 Content-Length: 36
 Content-Type: application/json
 Host: www.example.com
@@ -21,21 +21,23 @@ Host: www.example.com
 ```
 HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 60
+Content-Length: 133
 Content-Type: application/json; charset=utf-8
-ETag: W/"ec3f7f17f0116a3fe341508841f792e5"
+ETag: W/"761ff2b9a564a0bcc4e49ac8c9362a51"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 95bdb271-bd42-48db-a65e-f30fdc90534e
-X-Runtime: 0.014083
+X-Request-Id: faa09c57-01a8-4000-9bb5-dbec052b65fa
+X-Runtime: 0.014361
 X-XSS-Protection: 1; mode=block
 
 {
-  "id": 8,
+  "id": 47,
   "contents": "コメントだよー",
   "user": {
-    "id": 32
+    "id": 166,
+    "screen_name": "Kappa Taro",
+    "image_url": "https://facebook.com/hgoe.jpg"
   }
 }
 ```

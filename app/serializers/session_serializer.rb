@@ -1,8 +1,8 @@
-class SessionSerializer < ActiveModel::Serializer
-  attributes :token_type, :user_id, :access_token
+class SessionSerializer < ApplicationSerializer
+  attributes :token_type, :user, :access_token
 
-  def user_id
-    object.id
+  def user
+    UserSerializer.new(object)
   end
 
   def token_type

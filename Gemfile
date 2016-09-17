@@ -17,9 +17,12 @@ gem 'redis'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'seed-fu', '~> 2.3'
+
 gem 'devise'
 gem 'active_model_serializers'
 gem 'default_value_for'
+gem 'koala'
 
 gem 'config'
 gem 'fast_blank'

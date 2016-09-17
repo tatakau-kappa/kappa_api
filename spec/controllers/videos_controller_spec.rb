@@ -1,7 +1,8 @@
 describe VideosController, type: :request do
   describe '/GET /videos' do
     before do
-      create_list(:video, 3)
+      create_list(:video, 2)
+      create(:video_comment)
     end
 
     it 'get videos', autodoc: true do
@@ -46,7 +47,7 @@ describe VideosController, type: :request do
       }
     end
 
-    it 'update video', autodoc: true do
+    it 'update video for video server', autodoc: true do
       put video_path(video), params: params, headers: headers
 
       expect(response).to have_http_status(204)

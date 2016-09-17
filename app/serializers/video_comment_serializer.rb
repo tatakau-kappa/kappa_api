@@ -1,4 +1,4 @@
-class VideoCommentSerializer < ActiveModel::Serializer
+class VideoCommentSerializer < ApplicationSerializer
   attributes :id, :contents
 
   belongs_to :user

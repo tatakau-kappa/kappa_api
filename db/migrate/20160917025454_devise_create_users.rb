@@ -32,6 +32,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
 
       t.string :access_token
 
+      t.string :screen_name
+      t.string :image_url
+
       t.timestamps null: false
     end
 

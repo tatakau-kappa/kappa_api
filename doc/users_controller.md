@@ -22,19 +22,23 @@ Host: www.example.com
 ```
 HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 77
+Content-Length: 154
 Content-Type: application/json; charset=utf-8
-ETag: W/"969025ff89203309716a70f7b3e6fbc0"
+ETag: W/"20221f6e28075ae0d8280f820c76fcbc"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: b20b70a7-2965-40d9-a653-961257e61b2a
-X-Runtime: 0.076511
+X-Request-Id: 1f68bce2-be18-4948-8622-9634a103d198
+X-Runtime: 0.023251
 X-XSS-Protection: 1; mode=block
 
 {
   "token_type": "Bearer",
-  "user_id": 17,
-  "access_token": "17:_hR8cZZC5AS6rtZjvzSd"
+  "user": {
+    "id": 167,
+    "screen_name": "Kappa Taro",
+    "image_url": "https://facebook.com/hoge.jpg"
+  },
+  "access_token": "167:ESTx6SQhdvRr492GZaxV"
 }
 ```
