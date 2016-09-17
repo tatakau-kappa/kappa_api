@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def create
     user = User.from_omniauth(**user_params)
 
-    render json: user, serializer: SessionSerializer, root: nil
+    render json: user, login: true
   end
 
   private
