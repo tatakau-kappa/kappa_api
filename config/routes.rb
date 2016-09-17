@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, only: []
 
+  get :ping, to: 'application#ping'
+
   resources :login, only: [:create], controller: :users
 
   resources :videos do
