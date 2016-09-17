@@ -4,7 +4,7 @@ lock '3.6.1'
 set :application, 'kappa_api'
 set :repo_url, 'git@github.com:tatakau-kappa/kappa_api.git'
 
-set :deploy_to, '/home/kappa/kappa_api'
+set :deploy_to, '/root/kappa_api'
 
 set :scm, :git
 set :format, :pretty
