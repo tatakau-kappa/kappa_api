@@ -13,11 +13,15 @@ class Video < ApplicationRecord
   end
 
   def register_transition_job
-    self.class.redis.lpush(self.class.queue_name, { video_id: id, original_uid: original_uid }.to_json)
+    self.class.redis.lpush(self.class.queue_name, { video_uid: video_uid, image_uid: image_uid }.to_json)
   end
 
-  def original_path
-    resource_path(original_uid)
+  def original_video_path
+    resource_path(video_uid)
+  end
+
+  def original_image_path
+    resource_path(image_uid)
   end
 
   def swapped_path

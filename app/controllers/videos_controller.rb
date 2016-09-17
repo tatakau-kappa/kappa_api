@@ -16,7 +16,7 @@ class VideosController < ApplicationController
   def create
     videos = current_user.videos
     video = ApplicationRecord.transaction do
-      videos.create!(original_uid: params[:original_uid]).tap { |video| video.register_transition_job }
+      videos.create!(video_params.to_h).tap { |video| video.register_transition_job }
     end
 
     render json: video, status: :created
@@ -31,5 +31,11 @@ class VideosController < ApplicationController
     )
 
     head :no_content
+  end
+
+  private
+
+  def video_params
+    params.permit(:image_uid, :video_uid)
   end
 end

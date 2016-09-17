@@ -23,7 +23,10 @@ describe VideosController, type: :request do
 
   describe '/POST /videos' do
     let(:params) do
-      { original_uid: "#{Devise.friendly_token[0,20]}.mp4" }
+      {
+        video_uid: "#{Devise.friendly_token[0,20]}.mp4",
+        image_uid: "#{Devise.friendly_token[0,20]}.jpg"
+      }
     end
 
     it 'create video', autodoc: true do

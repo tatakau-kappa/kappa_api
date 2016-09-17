@@ -5,9 +5,9 @@ Create comment of video.
 
 #### Request
 ```
-GET /users/30/videos/comments HTTP/1.1
+GET /users/27/videos/comments HTTP/1.1
 Accept: application/json
-Authorization: 30:YvopQQEFWSaAJgGzafaV
+Authorization: 27:z2ByA5nx1VXAzV4LFDTL
 Content-Length: 0
 Content-Type: application/json
 Host: www.example.com
@@ -19,34 +19,34 @@ HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 184
 Content-Type: application/json; charset=utf-8
-ETag: W/"4b27d115578d2170517ad085b8869c31"
+ETag: W/"53db5a89d7272e74564e14b4d7f17dca"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: a7d08298-0bf4-4ab9-a103-5bf9784574a7
-X-Runtime: 0.046170
+X-Request-Id: f14a7e1d-d565-41fb-b86e-0e30a4f5038e
+X-Runtime: 0.025716
 X-XSS-Protection: 1; mode=block
 
 [
   {
+    "id": 5,
+    "contents": "コメントだよー",
+    "user": {
+      "id": 27
+    }
+  },
+  {
     "id": 6,
     "contents": "コメントだよー",
     "user": {
-      "id": 30
+      "id": 27
     }
   },
   {
     "id": 7,
     "contents": "コメントだよー",
     "user": {
-      "id": 30
-    }
-  },
-  {
-    "id": 8,
-    "contents": "コメントだよー",
-    "user": {
-      "id": 30
+      "id": 27
     }
   }
 ]

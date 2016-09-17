@@ -5,7 +5,8 @@ class VideoSerializer < ActiveModel::Serializer
 
   def resource
     {
-      original: object.original_path,
+      original_image: object.original_image_path,
+      original_video: object.original_video_path,
       swapped: object.swapped_path,
       thumbnail: object.thumbnail_path
     }

@@ -56,7 +56,8 @@ ActiveRecord::Schema.define(version: 20160917034733) do
 
   create_table "videos", force: :cascade do |t|
     t.integer  "user_id",                   null: false
-    t.string   "original_uid",              null: false
+    t.string   "video_uid",                 null: false
+    t.string   "image_uid",                 null: false
     t.string   "swapped_uid"
     t.string   "thumbnail_uid"
     t.string   "program_name"
@@ -64,10 +65,11 @@ ActiveRecord::Schema.define(version: 20160917034733) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.index ["created_at"], name: "index_videos_on_created_at"
-    t.index ["original_uid"], name: "index_videos_on_original_uid", unique: true
+    t.index ["image_uid"], name: "index_videos_on_image_uid", unique: true
     t.index ["swapped_uid"], name: "index_videos_on_swapped_uid", unique: true
     t.index ["thumbnail_uid"], name: "index_videos_on_thumbnail_uid", unique: true
     t.index ["user_id"], name: "index_videos_on_user_id"
+    t.index ["video_uid"], name: "index_videos_on_video_uid", unique: true
   end
 
 end
