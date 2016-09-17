@@ -10,6 +10,7 @@ set :scm, :git
 set :format, :pretty
 set :log_level, :info
 set :pty, false
+set :deploy_via, :remote_cache
 
 set :rails_env, fetch(:stage)
 

@@ -77,6 +77,8 @@ GEM
       capistrano (~> 3.1)
       sshkit (~> 1.2)
     capistrano-harrow (0.5.3)
+    capistrano-locally (0.2.3)
+      capistrano (~> 3.0)
     capistrano-rails (1.1.8)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -248,6 +250,7 @@ DEPENDENCIES
   better_errors
   capistrano
   capistrano-bundler
+  capistrano-locally
   capistrano-rails
   capistrano3-puma!
   config
