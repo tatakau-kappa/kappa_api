@@ -6,10 +6,9 @@
 set :stage, :production
 set :branch, 'master'
 
-server 'kappa_api', roles: %w{app web db}
+server 'localhost', user: 'root', roles: %w{app web db}
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
-
 
 
 # role-based syntax
