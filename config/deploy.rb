@@ -19,7 +19,7 @@ set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets tmp/puma vendor/bundle p
 
 set :bundle_flags, '--deployment'
 set :bundle_without, %w(development test deployment darwin).join(' ')
-set :bundle_path, -> {}
+set :bundle_path, -> { nil }
 
 set :keep_releases, 5
 
