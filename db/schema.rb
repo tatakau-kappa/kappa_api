@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160918010000) do
+ActiveRecord::Schema.define(version: 20160918044321) do
 
   create_table "docomo_tokens", force: :cascade do |t|
     t.string   "token",      null: false
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20160918010000) do
     t.string   "device_type",  null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.index ["device_type", "device_token"], name: "index_user_mobile_devices_on_device_type_and_device_token", unique: true
     t.index ["user_id"], name: "index_user_mobile_devices_on_user_id"
   end
 
