@@ -8,7 +8,6 @@ require 'capistrano/puma'
 require 'capistrano/rails/migrations'
 require 'seed-fu/capistrano3'
 require 'capistrano/sidekiq'
-require 'capistrano/sidekiq/monit'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
