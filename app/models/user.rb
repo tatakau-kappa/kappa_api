@@ -28,6 +28,10 @@ class User < ApplicationRecord
     end
   end
 
+  def current_point
+    docomo_point.current_point.body.to_obj['point'].to_i
+  end
+
   def email_required?
     false
   end
@@ -35,5 +39,9 @@ class User < ApplicationRecord
   def update_access_token!
     DocomoToken.paying_out(self.id)
     update!(access_token: "#{self.id}:#{Devise.friendly_token}")
+  end
+
+  def docomo_point
+    @_docomo_point_client ||= DocomoPoint::Client.new(docomo_token.token)
   end
 end

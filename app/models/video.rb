@@ -10,13 +10,23 @@ class Video < ApplicationRecord
     def queue_name
       'kappa'
     end
+
+    def remove_ad_point
+      10
+    end
   end
 
-  def register_transition_job
+  def register_transition_job(options = {})
     self.class.redis.lpush(
       self.class.queue_name,
-      { video_id: id, video_uid: video_uid, image_uid: image_uid }.to_json
+      { video_id: id, video_uid: video_uid, image_uid: image_uid }.merge(options).to_json
     )
+  end
+
+  def remove_ad
+    user.point.consume(self.class.remove_ad_point)
+
+    self
   end
 
   def add_up_bonus(vc)
