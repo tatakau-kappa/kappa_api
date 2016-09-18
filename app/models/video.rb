@@ -34,9 +34,10 @@ class Video < ApplicationRecord
       d_client = DocomoPoint::Client.new(user.docomo_token.token)
       # Docomo Point を 1 point 付与
       d_client.add_up(1)
-      # TODO: push notification
-      # user.user_mobile_devices.notify_to_ios('dポイントを獲得しました')
+      user.user_mobile_devices.notify_to_ios('dポイントを獲得しました')
     end
+
+    self
   end
 
   def swapped_url
