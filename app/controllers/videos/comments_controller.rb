@@ -1,4 +1,6 @@
 class Videos::CommentsController < ApplicationController
+  before_action :authenticate_user_from_token!, only: [:create]
+
   def index
     render json: resource.comments
   end

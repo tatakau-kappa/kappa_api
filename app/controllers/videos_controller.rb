@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  skip_before_action :authenticate_user_from_token!, only: [:show, :update, :destroy]
+  before_action :authenticate_user_from_token!, only: [:create]
 
   def index
     render json: Video.includes(:video_comments).order(created_at: :desc),
@@ -11,6 +11,8 @@ class VideosController < ApplicationController
     return head 102 if video.swapped_url.blank?
 
     video.increment!(:view_count)
+    PointJob.perform_later(video, video.view_count)
+
     redirect_to video.swapped_url
   end
 

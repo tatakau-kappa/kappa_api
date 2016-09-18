@@ -1,9 +1,6 @@
 class ApplicationController < ActionController::API
   include AbstractController::Translation
 
-  before_action :authenticate_user_from_token!
-  skip_before_action :authenticate_user_from_token!, only: [:ping]
-
   respond_to :json
 
   rescue_from ActiveRecord::RecordNotFound do |_e|

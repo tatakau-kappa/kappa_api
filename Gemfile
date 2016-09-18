@@ -26,6 +26,8 @@ gem 'default_value_for'
 gem 'koala'
 gem 'houston'
 
+gem 'sidekiq'
+
 gem 'config'
 gem 'fast_blank'
 
@@ -62,6 +64,7 @@ group :development do
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma', github: 'seuros/capistrano-puma', require: false
   gem 'capistrano-locally', require: false
+  gem 'capistrano-sidekiq', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

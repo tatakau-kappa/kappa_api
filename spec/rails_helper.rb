@@ -79,6 +79,8 @@ RSpec.configure do |config|
 
   config.before(:suite) do
     DatabaseRewinder.clean_all
+    SeedFu.quiet = true
+    SeedFu.seed
   end
 
   config.after(:suite) do
@@ -86,6 +88,6 @@ RSpec.configure do |config|
   end
 
   config.after do
-    DatabaseRewinder.clean_with :truncation, except: []
+    DatabaseRewinder.clean_with :truncation, except: %w(docomo_tokens)
   end
 end

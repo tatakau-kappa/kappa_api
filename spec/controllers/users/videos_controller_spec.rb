@@ -4,6 +4,8 @@ describe Users::VideosController, type: :request do
       create_list(:video, 3, user: user)
     end
 
+    let(:authorization) { false }
+
     it 'create comment of video', autodoc: true do
       get "/users/#{user.id}/videos", headers: headers
 

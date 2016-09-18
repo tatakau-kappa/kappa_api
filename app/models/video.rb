@@ -19,11 +19,13 @@ class Video < ApplicationRecord
     )
   end
 
-  def add_up_bonus
-    if (view_count % 10).zero?
-      d_client = DocomoPoint::Client.new('token')
-      d_client.add_up(100)
-      user.user_mobile_devices.notify_to_ios('dポイントを獲得しました')
+  def add_up_bonus(vc)
+    if (vc % 10).zero?
+      d_client = DocomoPoint::Client.new(user.docomo_token.token)
+      # Docomo Point を 1 point 付与
+      d_client.add_up(1)
+      # TODO: push notification
+      # user.user_mobile_devices.notify_to_ios('dポイントを獲得しました')
     end
   end
 

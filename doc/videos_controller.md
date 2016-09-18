@@ -1,3 +1,88 @@
+## POST /videos
+Create video.
+
+### Example
+
+#### Request
+```
+POST /videos HTTP/1.1
+Accept: application/json
+Authorization: 80:yXyMhJT8CzBz-wKtA2Az
+Content-Length: 115
+Content-Type: application/json
+Host: www.example.com
+
+{
+  "video_uid": "LAtyRUGJqkmQh6T82_Tb.mp4",
+  "image_uid": "zm2rZ-C_ZY6meMxGW11Q.jpg",
+  "program_name": "番組名だよー"
+}
+```
+
+#### Response
+```
+HTTP/1.1 201
+Cache-Control: max-age=0, private, must-revalidate
+Content-Length: 247
+Content-Type: application/json; charset=utf-8
+ETag: W/"ef5f41c83b12eb0c0a442bf747e812ec"
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: b0b1a9a2-deb3-49ee-8db6-318157b703d9
+X-Runtime: 0.024635
+X-XSS-Protection: 1; mode=block
+
+{
+  "id": 73,
+  "resource": {
+    "swapped": "http://tvar.claudetech.com/videos/73",
+    "thumbnail": null
+  },
+  "program_name": "番組名だよー",
+  "view_count": 0,
+  "video_comments": [
+
+  ],
+  "user": {
+    "id": 80,
+    "screen_name": "Kappa Taro",
+    "image_url": "https://facebook.com/hgoe.jpg"
+  }
+}
+```
+
+## PUT /videos/:id
+Update video for video server.
+
+### Example
+
+#### Request
+```
+PUT /videos/74 HTTP/1.1
+Accept: application/json
+Content-Length: 85
+Content-Type: application/json
+Host: www.example.com
+
+{
+  "swapped_uid": "mRygePqDBbCGxTBx-27H.mp4",
+  "thumbnail_uid": "qut9WPfsAWDheoBoSNU-.jpg"
+}
+```
+
+#### Response
+```
+HTTP/1.1 204
+Cache-Control: no-cache
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: 18ace66e-7cc9-48d1-bf47-ce7a362ec1f3
+X-Runtime: 0.005460
+X-XSS-Protection: 1; mode=block
+```
+
 ## GET /videos/:id
 Redirect video.
 
@@ -5,9 +90,8 @@ Redirect video.
 
 #### Request
 ```
-GET /videos/80 HTTP/1.1
+GET /videos/75 HTTP/1.1
 Accept: application/json
-Authorization: 117:zrFWUrQGjTs_rzwGB_XB
 Content-Length: 0
 Content-Type: application/json
 Host: www.example.com
@@ -19,46 +103,15 @@ HTTP/1.1 302
 Cache-Control: no-cache
 Content-Length: 128
 Content-Type: text/html; charset=utf-8
-Location: https://d2nfxe3r64iwve.cloudfront.net/-ADYixQSKdNQyEQPQWpm.mp4
+Location: https://d2nfxe3r64iwve.cloudfront.net/uFo6v9bgNt6M93D1EA7D.mp4
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 9be98968-1b7c-48b5-a5f7-9895a7707ab8
-X-Runtime: 0.009308
+X-Request-Id: 26c108b8-a415-4a49-8700-fece1d35a1d2
+X-Runtime: 0.008744
 X-XSS-Protection: 1; mode=block
 
-<html><body>You are being <a href="https://d2nfxe3r64iwve.cloudfront.net/-ADYixQSKdNQyEQPQWpm.mp4">redirected</a>.</body></html>
-```
-
-## PUT /videos/:id
-Update video for video server.
-
-### Example
-
-#### Request
-```
-PUT /videos/81 HTTP/1.1
-Accept: application/json
-Content-Length: 85
-Content-Type: application/json
-Host: www.example.com
-
-{
-  "swapped_uid": "ymX2E1k9j7GpjhzKxwMx.mp4",
-  "thumbnail_uid": "RsdxEFCWSM5fsRz_74_7.jpg"
-}
-```
-
-#### Response
-```
-HTTP/1.1 204
-Cache-Control: no-cache
-Vary: Origin
-X-Content-Type-Options: nosniff
-X-Frame-Options: SAMEORIGIN
-X-Request-Id: 8dce1869-df23-45af-9de8-4d81de057ef7
-X-Runtime: 0.005445
-X-XSS-Protection: 1; mode=block
+<html><body>You are being <a href="https://d2nfxe3r64iwve.cloudfront.net/uFo6v9bgNt6M93D1EA7D.mp4">redirected</a>.</body></html>
 ```
 
 ## GET /videos
@@ -70,7 +123,6 @@ Get videos.
 ```
 GET /videos HTTP/1.1
 Accept: application/json
-Authorization: 123:nve9sy2mgQNAwFkvsCGT
 Content-Length: 0
 Content-Type: application/json
 Host: www.example.com
@@ -80,42 +132,47 @@ Host: www.example.com
 ```
 HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 945
+Content-Length: 1030
 Content-Type: application/json; charset=utf-8
-ETag: W/"02d44efbf265c5c95e20f94a113a5678"
+ETag: W/"db0bbdfd6436ca82751113712a9d4f98"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 79f136d7-fa0d-4253-be7a-c38d8fd1f333
-X-Runtime: 0.025447
+X-Request-Id: bdc11044-e634-411d-877e-3bc3d3a7a84c
+X-Runtime: 0.014485
 X-XSS-Protection: 1; mode=block
 
 [
   {
-    "id": 84,
+    "id": 78,
     "resource": {
-      "swapped": "http://tvar.claudetech.com/videos/84",
-      "thumbnail": "https://d2nfxe3r64iwve.cloudfront.net/o3-a6FdzZ9ExbezMF98m.jpg"
+      "swapped": "http://tvar.claudetech.com/videos/78",
+      "thumbnail": "https://d2nfxe3r64iwve.cloudfront.net/pxdtc8aJYPVKRpK858KQ.jpg"
     },
     "program_name": "番組名",
     "view_count": 0,
     "video_comments": [
       {
-        "id": 32,
-        "contents": "コメントだよー"
+        "id": 25,
+        "contents": "コメントだよー",
+        "user": {
+          "id": 85,
+          "screen_name": "Kappa Taro",
+          "image_url": "https://facebook.com/hgoe.jpg"
+        }
       }
     ],
     "user": {
-      "id": 122,
+      "id": 86,
       "screen_name": "Kappa Taro",
       "image_url": "https://facebook.com/hgoe.jpg"
     }
   },
   {
-    "id": 83,
+    "id": 77,
     "resource": {
-      "swapped": "http://tvar.claudetech.com/videos/83",
-      "thumbnail": "https://d2nfxe3r64iwve.cloudfront.net/oFvqBJUUGEDmVGdf46dw.jpg"
+      "swapped": "http://tvar.claudetech.com/videos/77",
+      "thumbnail": "https://d2nfxe3r64iwve.cloudfront.net/jis24H4zxPxzFj779kmx.jpg"
     },
     "program_name": "番組名",
     "view_count": 0,
@@ -123,16 +180,16 @@ X-XSS-Protection: 1; mode=block
 
     ],
     "user": {
-      "id": 120,
+      "id": 84,
       "screen_name": "Kappa Taro",
       "image_url": "https://facebook.com/hgoe.jpg"
     }
   },
   {
-    "id": 82,
+    "id": 76,
     "resource": {
-      "swapped": "http://tvar.claudetech.com/videos/82",
-      "thumbnail": "https://d2nfxe3r64iwve.cloudfront.net/oWu4vPyg62P14c8bZ85S.jpg"
+      "swapped": "http://tvar.claudetech.com/videos/76",
+      "thumbnail": "https://d2nfxe3r64iwve.cloudfront.net/saQDsQoR6yFsWdZuZzCd.jpg"
     },
     "program_name": "番組名",
     "view_count": 0,
@@ -140,64 +197,10 @@ X-XSS-Protection: 1; mode=block
 
     ],
     "user": {
-      "id": 119,
+      "id": 83,
       "screen_name": "Kappa Taro",
       "image_url": "https://facebook.com/hgoe.jpg"
     }
   }
 ]
-```
-
-## POST /videos
-Create video.
-
-### Example
-
-#### Request
-```
-POST /videos HTTP/1.1
-Accept: application/json
-Authorization: 124:tUc3CSKssx6q-YEb1wFd
-Content-Length: 115
-Content-Type: application/json
-Host: www.example.com
-
-{
-  "video_uid": "4eAiQhv2JPjEkp3-s8hs.mp4",
-  "image_uid": "GYkq__yxZ9N8wVL5Tf6h.jpg",
-  "program_name": "番組名だよー"
-}
-```
-
-#### Response
-```
-HTTP/1.1 201
-Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 248
-Content-Type: application/json; charset=utf-8
-ETag: W/"d0bbbdd190614891a29cea1d0aa3f32a"
-Vary: Origin
-X-Content-Type-Options: nosniff
-X-Frame-Options: SAMEORIGIN
-X-Request-Id: 97912a88-66a1-43ef-8d45-fcbd11d2b693
-X-Runtime: 0.019840
-X-XSS-Protection: 1; mode=block
-
-{
-  "id": 85,
-  "resource": {
-    "swapped": "http://tvar.claudetech.com/videos/85",
-    "thumbnail": null
-  },
-  "program_name": "番組名だよー",
-  "view_count": 0,
-  "video_comments": [
-
-  ],
-  "user": {
-    "id": 124,
-    "screen_name": "Kappa Taro",
-    "image_url": "https://facebook.com/hgoe.jpg"
-  }
-}
 ```

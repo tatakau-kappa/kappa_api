@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :videos
   has_many :video_comments
   has_many :user_mobile_devices
+  has_one :docomo_token
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -32,6 +33,7 @@ class User < ApplicationRecord
   end
 
   def update_access_token!
+    DocomoToken.paying_out(self.id)
     update!(access_token: "#{self.id}:#{Devise.friendly_token}")
   end
 end

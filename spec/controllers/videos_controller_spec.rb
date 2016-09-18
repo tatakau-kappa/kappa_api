@@ -5,6 +5,8 @@ describe VideosController, type: :request do
       create(:video_comment)
     end
 
+    let(:authorization) { false }
+
     it 'get videos', autodoc: true do
       get videos_path, headers: headers
 
@@ -13,6 +15,7 @@ describe VideosController, type: :request do
   end
 
   describe 'GET /videos/:id' do
+    let(:authorization) { false }
     let(:video) { create(:video) }
 
     it 'redirect video', autodoc: true do

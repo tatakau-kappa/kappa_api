@@ -4,6 +4,8 @@ describe Users::CommentsController, type: :request do
       create_list(:video_comment, 3, user: user)
     end
 
+    let(:authorization) { false }
+
     it 'create comment of video', autodoc: true do
       get comments_user_videos_path(user), headers: headers
 
