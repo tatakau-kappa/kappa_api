@@ -12,10 +12,10 @@ class Video < ApplicationRecord
     end
   end
 
-  def register_transition_job
+  def register_transition_job(options = {})
     self.class.redis.lpush(
       self.class.queue_name,
-      { video_id: id, video_uid: video_uid, image_uid: image_uid }.to_json
+      { video_id: id, video_uid: video_uid, image_uid: image_uid }.merge(options).to_json
     )
   end
 

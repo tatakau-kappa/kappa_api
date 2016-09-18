@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :login, only: [:create], controller: :users
 
   resources :videos do
+    post :remove_ad, on: :member
     resources :comments, only: [:index, :create], module: :videos
   end
 

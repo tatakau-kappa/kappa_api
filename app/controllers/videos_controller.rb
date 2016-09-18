@@ -36,6 +36,13 @@ class VideosController < ApplicationController
     head :no_content
   end
 
+  def remove_ad
+    video = Video.find(params[:id])
+    # TODO: check for points and decrease points
+    video.register_transition_job(no_ad: true)
+    head :no_content
+  end
+
   def destroy
     Video.find(params[:id]).destroy
   end
