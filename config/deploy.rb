@@ -33,6 +33,8 @@ set :puma_pid, -> { "#{shared_path}/tmp/puma/pid" }
 set :original_preload_app, fetch(:puma_preload_app)
 set :puma_preload_app, -> { fetch(:original_preload_app) || !!ENV['FORCE_RESTART'] }
 
+set :sidekiq_monit_use_sudo, false
+
 namespace :deploy do
   after :restart, :clear_cache do
     on roles(:app), in: :sequence do
