@@ -34,6 +34,7 @@ class Video < ApplicationRecord
       d_client = DocomoPoint::Client.new(user.docomo_token.token)
       # Docomo Point を 1 point 付与
       d_client.add_up(1)
+      Rails.logger.info('================ ポイント付与したよー ===================')
       user.user_mobile_devices.notify_to_ios('dポイントを獲得しました')
     end
 
