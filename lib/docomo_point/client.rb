@@ -10,7 +10,7 @@ module DocomoPoint
 
     class << self
       def base_url
-        'http://160.16.66.40/dummypoint/api/v1'
+        'http://160.16.66.40'
       end
     end
 
@@ -27,7 +27,7 @@ module DocomoPoint
         token: @access_token
       }
       conn = Faraday.new(faraday_options, &FARADAY_MIDDLEWARE)
-      res  = conn.get('/point', params)
+      res  = conn.get('/dummypoint/api/v1/point', params)
 
       raise_or_return_response(res)
     end
@@ -42,7 +42,7 @@ module DocomoPoint
         point: point
       }
       conn = Faraday.new(faraday_options, &FARADAY_MIDDLEWARE)
-      res  = conn.get('/save', params)
+      res  = conn.get('/dummypoint/api/v1/save', params)
 
       raise_or_return_response(res)
     end
@@ -57,7 +57,7 @@ module DocomoPoint
         point: point
       }
       conn = Faraday.new(faraday_options, &FARADAY_MIDDLEWARE)
-      res  = conn.get('/pay', params)
+      res  = conn.get('/dummypoint/api/v1/pay', params)
 
       raise_or_return_response(res)
     end
