@@ -7,13 +7,13 @@ Register mobile device token.
 ```
 POST /mobile_devices HTTP/1.1
 Accept: application/json
-Authorization: 74:Nieu-JPYmWgvQWS_ZzvL
+Authorization: 25:NgzcKuzixVm-pMuGmjYu
 Content-Length: 59
 Content-Type: application/json
 Host: www.example.com
 
 {
-  "device_token": "wzvYHh8pHR1Gwvxsd6uN",
+  "device_token": "m1Bs8vVxe1jPi-RrfdS8",
   "device_type": "ios"
 }
 ```
@@ -25,7 +25,7 @@ Cache-Control: no-cache
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 4af1f522-892e-40ff-a092-12c9522e408d
-X-Runtime: 0.032537
+X-Request-Id: 8dda0f4d-5fdf-4e89-9b45-237b8cfd6194
+X-Runtime: 0.022558
 X-XSS-Protection: 1; mode=block
 ```

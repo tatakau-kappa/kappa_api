@@ -5,7 +5,7 @@ Create comment of video.
 
 #### Request
 ```
-GET /users/87/videos HTTP/1.1
+GET /users/24/videos HTTP/1.1
 Accept: application/json
 Content-Length: 0
 Content-Type: application/json
@@ -18,20 +18,20 @@ HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 898
 Content-Type: application/json; charset=utf-8
-ETag: W/"bc6ba95afec9fb1d13ced699723baddc"
+ETag: W/"5f946d6d6ee0f5bdab1985d85f60767b"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: e08d3408-d0f4-4834-970b-2be8ea9dbf24
-X-Runtime: 0.014072
+X-Request-Id: c99389f8-c9c9-4ed3-b5ff-12bf550a6d8a
+X-Runtime: 0.016932
 X-XSS-Protection: 1; mode=block
 
 [
   {
-    "id": 79,
+    "id": 33,
     "resource": {
-      "swapped": "http://tvar.claudetech.com/videos/79",
-      "thumbnail": "https://d2nfxe3r64iwve.cloudfront.net/CZAma1rsxZHWytAdCxs1.jpg"
+      "swapped": "http://tvar.claudetech.com/videos/33",
+      "thumbnail": "https://d2nfxe3r64iwve.cloudfront.net/i6EVgYSyRGLNGr3FApt9.jpg"
     },
     "program_name": "番組名",
     "view_count": 0,
@@ -39,16 +39,16 @@ X-XSS-Protection: 1; mode=block
 
     ],
     "user": {
-      "id": 87,
+      "id": 24,
       "screen_name": "Kappa Taro",
       "image_url": "https://facebook.com/hgoe.jpg"
     }
   },
   {
-    "id": 80,
+    "id": 34,
     "resource": {
-      "swapped": "http://tvar.claudetech.com/videos/80",
-      "thumbnail": "https://d2nfxe3r64iwve.cloudfront.net/w2HGp52WNAa5srhZy-sb.jpg"
+      "swapped": "http://tvar.claudetech.com/videos/34",
+      "thumbnail": "https://d2nfxe3r64iwve.cloudfront.net/ySP6kWgdqntz3wZaxzvd.jpg"
     },
     "program_name": "番組名",
     "view_count": 0,
@@ -56,16 +56,16 @@ X-XSS-Protection: 1; mode=block
 
     ],
     "user": {
-      "id": 87,
+      "id": 24,
       "screen_name": "Kappa Taro",
       "image_url": "https://facebook.com/hgoe.jpg"
     }
   },
   {
-    "id": 81,
+    "id": 35,
     "resource": {
-      "swapped": "http://tvar.claudetech.com/videos/81",
-      "thumbnail": "https://d2nfxe3r64iwve.cloudfront.net/_HHJNSowLktYxvK9pzzS.jpg"
+      "swapped": "http://tvar.claudetech.com/videos/35",
+      "thumbnail": "https://d2nfxe3r64iwve.cloudfront.net/_9EdAxYL_sktNNKxRCSf.jpg"
     },
     "program_name": "番組名",
     "view_count": 0,
@@ -73,7 +73,7 @@ X-XSS-Protection: 1; mode=block
 
     ],
     "user": {
-      "id": 87,
+      "id": 24,
       "screen_name": "Kappa Taro",
       "image_url": "https://facebook.com/hgoe.jpg"
     }

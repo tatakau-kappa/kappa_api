@@ -57,4 +57,19 @@ describe VideosController, type: :request do
       expect(response).to have_http_status(204)
     end
   end
+
+  describe 'POST /videos/:id/remove_ad' do
+    before do
+      allow_any_instance_of(User).to receive(:current_point).and_return(100)
+      allow_any_instance_of(Video).to receive(:remove_ad).and_return(video)
+    end
+
+    let(:video) { create(:video, user: user) }
+
+    it 'remove ad', autodoc: true do
+      post remove_ad_video_path(video), headers: headers
+
+      expect(response).to have_http_status(204)
+    end
+  end
 end

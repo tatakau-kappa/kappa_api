@@ -24,7 +24,7 @@ class Video < ApplicationRecord
   end
 
   def remove_ad
-    user.point.consume(self.class.remove_ad_point)
+    user.docomo_point.consume(self.class.remove_ad_point)
 
     self
   end

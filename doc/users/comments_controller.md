@@ -5,7 +5,7 @@ Create comment of video.
 
 #### Request
 ```
-GET /users/75/videos/comments HTTP/1.1
+GET /users/26/videos/comments HTTP/1.1
 Accept: application/json
 Content-Length: 0
 Content-Type: application/json
@@ -16,40 +16,40 @@ Host: www.example.com
 ```
 HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 400
+Content-Length: 397
 Content-Type: application/json; charset=utf-8
-ETag: W/"7a9be04a0e325c5770690551201c0805"
+ETag: W/"73dbf8c941b125c75f4e9eaa17a95046"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 13d4070d-7626-46dd-8c2c-4b7dddcb40a7
-X-Runtime: 0.034484
+X-Request-Id: 5732fe11-75b1-4816-a630-8e7b70fb2253
+X-Runtime: 0.025155
 X-XSS-Protection: 1; mode=block
 
 [
   {
-    "id": 22,
+    "id": 4,
     "contents": "コメントだよー",
     "user": {
-      "id": 75,
+      "id": 26,
       "screen_name": "Kappa Taro",
       "image_url": "https://facebook.com/hgoe.jpg"
     }
   },
   {
-    "id": 23,
+    "id": 5,
     "contents": "コメントだよー",
     "user": {
-      "id": 75,
+      "id": 26,
       "screen_name": "Kappa Taro",
       "image_url": "https://facebook.com/hgoe.jpg"
     }
   },
   {
-    "id": 24,
+    "id": 6,
     "contents": "コメントだよー",
     "user": {
-      "id": 75,
+      "id": 26,
       "screen_name": "Kappa Taro",
       "image_url": "https://facebook.com/hgoe.jpg"
     }
