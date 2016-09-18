@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160917200219) do
+ActiveRecord::Schema.define(version: 20160918003958) do
 
   create_table "user_mobile_devices", force: :cascade do |t|
     t.integer  "user_id",      null: false
@@ -76,11 +76,11 @@ ActiveRecord::Schema.define(version: 20160917200219) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.index ["created_at"], name: "index_videos_on_created_at"
-    t.index ["image_uid"], name: "index_videos_on_image_uid", unique: true
+    t.index ["image_uid"], name: "index_videos_on_image_uid"
     t.index ["swapped_uid"], name: "index_videos_on_swapped_uid", unique: true
     t.index ["thumbnail_uid"], name: "index_videos_on_thumbnail_uid", unique: true
     t.index ["user_id"], name: "index_videos_on_user_id"
-    t.index ["video_uid"], name: "index_videos_on_video_uid", unique: true
+    t.index ["video_uid"], name: "index_videos_on_video_uid"
   end
 
 end

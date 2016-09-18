@@ -1,1 +1,1 @@
-Rails.application.routes.default_url_options[:host] = 'tvar.claudetech.com'
+Rails.application.routes.default_url_options[:host] = Settings.host
