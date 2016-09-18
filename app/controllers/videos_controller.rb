@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  before_action :authenticate_user_from_token!, only: [:create]
+  before_action :authenticate_user_from_token!, only: [:create, :remove_ad]
 
   def index
     render json: Video.includes(:video_comments).order(created_at: :desc),
@@ -38,8 +38,11 @@ class VideosController < ApplicationController
 
   def remove_ad
     video = Video.find(params[:id])
-    # TODO: check for points and decrease points
-    video.register_transition_job(no_ad: true)
+    if current_user.current_point < Video.remove_ad_point
+      return head :bad_request
+    end
+
+    video.remove_ad.register_transition_job(no_ad: true)
     head :no_content
   end
 
